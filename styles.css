@@ -1,0 +1,628 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Estilos gerais */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.containerjogos {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.containerblog {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.containersobre {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Estilos do cabeçalho(geral) */
+header {
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px; /* Altura desejada do cabeçalho */
+    color: rgb(52, 143, 132);
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Adicionado para posicionamento absoluto dos ícones sociais */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Muda o tamanho do título */
+}
+
+header nav a { /* Muda as letras do cabeçalho (Início, Jogos, Blog, etc) */
+    color: rgb(52, 143, 132);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /*cores de transição das letras do cabeçalho*/
+}
+
+/* Estilos da introdução */
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+.intro h2 {
+    color: rgba(52, 143, 132, 0.788);
+    font-size: 30px;
+}
+.intro p{
+    font-size: 18px;
+}
+
+/*Estios de contacto*/
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: rgb(52, 143, 132, 0.788);
+}
+
+/* Estilos do CTA */
+.cta {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cta .btn {
+    background-color: rgb(36, 95, 88);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: rgb(49, 131, 121);
+}
+
+/* Estilos sociais(todas Pags com Social */
+.social {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1; /* Garante que os ícones sociais estejam acima do conteúdo do cabeçalho */
+}
+
+.social a {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.social a img {
+    width: 30px;
+    height: 30px;;
+    transition: transform 0.3s;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos sociais(Pag-Ártemis) */
+.sociall {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1; /* Garante que os ícones sociais estejam acima do conteúdo do cabeçalho */
+}
+
+.sociall a {
+    display: inline-block;
+}
+
+.sociall a img {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s;
+}
+
+.sociall a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilos ocultos e mostrados */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Estilos do formulário do contactos(Pag contactos)*/
+.containerform{
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.containerform h2{
+    color:rgb(52, 143, 132);
+    text-align: center;
+    font-size: 30px;
+}
+.containerform p{
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(52, 143, 132);;
+    border-radius: 10px;
+}
+
+form button {
+    background-color: rgb(36, 95, 88);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: rgb(49, 131, 121);;
+}
+
+/* Estilos dos posts do blog(Pag-Artemis) */
+/* Estilizando o contêiner do carrossel */
+.blog-pp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.blog-post-preview {
+    position: relative; /* Necessário para posicionar o texto sobre a imagem */
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 5px;
+    overflow: hidden; /* Oculta qualquer parte da imagem que exceda o card */
+    box-shadow: 0 0 10px rgba(52, 143, 132, 0.774);
+    transition: transform 0.3s ease;
+}
+
+.blog-previews h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-post-content {
+    position: relative; /* Garante que o texto fique sobre a imagem */
+}
+
+.blog-post-content img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o card sem distorção */
+    border-radius: 5px 5px 0 0; /* Arredonda apenas as bordas superiores */
+}
+
+.blog-post-text {
+    position: absolute; /* Permite que o texto fique sobre a imagem */
+    bottom: 0; /* Posiciona o texto na parte inferior */
+    left: 0;
+    width: 100%; /* Faz com que o texto ocupe a largura total do card */
+    padding: 10px;
+    color: white; /* Ajusta a cor do texto para melhor visibilidade */
+    background-color: rgba(0, 0, 0, 0.6); /* Adiciona fundo semi-transparente para o texto */
+    border-radius: 0 0 5px 5px; /* Arredonda as bordas inferiores do texto */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+.carousel-container .prev,
+.carousel-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(52, 143, 132);;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.carousel-container .prev {
+    left: 10px;
+}
+
+.carousel-container .next {
+    right: 10px;
+}
+
+/* Adicionando efeitos de hover */
+.blog-post-preview:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos do Parallax(Pag-Artemis)*/
+.parallax-container{
+    overflow: hidden;
+    position: relative;
+    height: 500px; /* Tamanho da área do parallax */
+    border-radius: 500px;
+}
+.parallax{
+    background-image: url('Imagens/Parallax.jpg');
+    height: 150%; /* Maior que o container para criar o efeito de revelação */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax-content{
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Estilos do blog(Pag-Blog)*/
+#blog{
+    display: flex;
+    flex-direction: column; /* Ajuste o flex-direction conforme necessário */
+    align-items: center;
+    margin-top: 20px;
+}
+.blog-post {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(69, 189, 175);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+}
+.blog-post:hover{
+    transform: scale(1.02);
+}
+.blog-post:hover img{
+    transform: scale(1.1);
+}
+.blog-post img{
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+/*Blog pra sem atualizações*/
+.blog-post-null{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 100px;
+}
+.blog-post-null-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1;
+}
+.blog-post-null h1{
+    margin-top: 0;
+    color: rgb(52, 143, 132);
+    font-size: 30px;
+}
+.blog-post-null-content img{
+    max-width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.blog-post-contenti {
+    flex: 1;
+}
+.blog-post-contenti h3{
+    margin-top: 0;
+    color: rgb(52, 143, 132);
+    font-size: 30px;
+}
+.blog-post-contenti p{
+    font-size: 18px;
+}
+.blog-post.left {
+    flex-direction: row;
+}
+.blog-post.right {
+    flex-direction: row-reverse;
+}
+
+/* Estilos dos itens de jogo(Pag-Jogos), cor esmeralda. rgb(52, 143, 132);*/
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.game-item {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(69, 189, 175);
+    margin: 10px;
+    padding: 10px;
+    width: 600px;
+    transition: transform 0.3s ease;
+}
+.game-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.game-item:hover {
+    transform: scale(1.02);
+}
+.game-item h3{
+    color: rgb(52, 143, 132);
+    font-size: 30px;
+}
+
+.game-item:hover .game-item img {
+    transform: scale(1.1);
+}
+
+/*Estilos de equipe(Pag-Sobre)*/
+#sobre {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#sobre h2 {
+    color: rgb(52, 143, 132);
+    font-size: 30px;
+}
+
+#sobre p {
+    color: #ffffff;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#equipe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#equipe h2 {
+    color: rgb(52, 143, 132);
+    font-size: 30px;
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 20px;
+}
+
+.team-member-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Espaço entre a imagem e o nome */
+}
+
+.team-details {
+    text-align: center;
+}
+
+.team-details h3 {
+    margin-top: 0;
+    color: rgb(79, 215, 199);
+    font-size: 25px;
+}
+
+.team-details p {
+    color: white;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgb(69, 189, 175);
+}
+
+/*estilos do rodapé*/
+footer {
+    background-color: rgb(33, 88, 82);
+    color: white;
+    text-align: center;
+    padding: 40px 0; /* Aumentei o padding para mais espaço no rodapé */
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px; /* Defini um máximo de largura para o conteúdo do rodapé */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-info {
+    text-align: left; /* Alinha as informações à esquerda */
+}
+
+.footer-info p {
+    margin: 5px 0; /* Ajusta o espaçamento entre os parágrafos */
+}
+
+.footer-links {
+    text-align: right; /* Alinha os links à direita */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(69, 188, 174);
+}
+
+.footer-copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto; /* Centraliza horizontalmente */
+}
+
+
+/* Media Queries */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .post-content {
+        padding: 20px;
+    }
+    .post-content img {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .intro h1 {
+        font-size: 2rem;
+    }
+    .intro p {
+        font-size: 16px;
+    }
+    footer {
+        padding: 100px 0; /* Reduz o padding do rodapé em telas pequenas */
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .post-content {
+        padding: 30px;
+    }
+    .post-content img {
+        max-width: 80%;
+        margin-right: 10px;
+    }
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 17px;
+    }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 901px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+    .post-content {
+        padding: 50px;
+    }
+    .post-content img {
+        max-width: 600px;
+    }
+    .intro h1 {
+        font-size: 3rem;
+    }
+    .intro p {
+        font-size: 18px;
+    }
+}
+
+
