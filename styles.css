@@ -141,19 +141,51 @@ header nav a:hover {
     justify-content: space-around;
     z-index: 1; /* Garante que os ícones sociais estejam acima do conteúdo do cabeçalho */
 }
-
 .sociall a {
     display: inline-block;
 }
-
 .sociall a img {
     width: 200px;
     height: 200px;
     transition: transform 0.3s;
 }
-
 .sociall a img:hover {
     transform: scale(1.1);
+}
+/*Estilo sociais do blog vazios(pag-blog*/
+.blog-ou{
+    position: relative; /* Necessário para posicionar o texto sobre a imagem */
+    min-width: 100px;
+    max-width: 500px;
+    height: 300px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 5px;
+    overflow: hidden; /* Oculta qualquer parte da imagem que exceda o card */
+    transition: transform 0.3s ease;
+}
+.blog-ou:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(69, 189, 175);
+}
+.socialll {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 1; /* Garante que os ícones sociais estejam acima do conteúdo do cabeçalho */
+}
+.socialll a{
+    width: 80%;
+}
+.socialll a img{
+    width: 100%;
+}
+.ou-cta {
+    text-align: center;
+    margin: 5px 5px;
 }
 
 
