@@ -306,7 +306,7 @@ form button:hover {
     border-radius: 500px;
 }
 .parallax{
-    background-image: url('Imagens/Parallax.jpg');
+    background-image: url('Imagens/HorizonStudios.png');
     height: 150%; /* Maior que o container para criar o efeito de revelação */
     background-attachment: fixed;
     background-position: center;
@@ -321,6 +321,12 @@ form button:hover {
     background-color: rgb(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+}
+.parallax-content h1 {
+    color: rgb(47, 0, 255);
+}
+.parallax-content p{
+    color: rgb(47, 0, 255);
 }
 
 
