@@ -440,18 +440,23 @@ form button:hover {
 
 /* Estilos dos itens de jogo(Pag-Jogos), cor esmeralda. rgb(52, 143, 132);*/
 .game-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .game-item {
     background-color: black;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(69, 189, 175);
     margin: 10px;
     padding: 10px;
-    width: 600px;
+    min-width: 300px;
     transition: transform 0.3s ease;
+}
+.game-item-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .game-item img {
     max-width: 100%;
@@ -459,7 +464,8 @@ form button:hover {
     transition: transform 0.3s ease;
 }
 .game-item:hover {
-    transform: scale(1.02);
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px rgba(69, 189, 175);
 }
 .game-item h3{
     color: rgb(52, 143, 132);
